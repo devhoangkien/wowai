@@ -1,0 +1,24 @@
+{
+  "name": "wowai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-grpc": "node ./server/grpcServer.js",
+    "start-dev": "node server.js",
+    "start": "concurrently 'npm:start-grpc' 'npm:start-dev' "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.7.10",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "grpc": "^1.24.11"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
